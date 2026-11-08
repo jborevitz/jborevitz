@@ -1,4 +1,5 @@
 # Precision Landscape Regeneration
+by Borevitz (ideas,team,papers) ClaudeScience-Opus5 (re-prose and python) Nov8, 2026
 
 Tools for reading a landscape at the resolution it actually varies at, and for
 deciding what to do about it.
