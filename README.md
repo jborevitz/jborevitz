@@ -77,6 +77,10 @@ aligned with collaborators' models rather than duplicating them.
 - **[DAESim](https://github.com/NortonAlex/DAESim)** — the dynamic
   agro-ecosystem simulator this framework uses as its point model
   (Taghikhah, Borevitz, Costanza & Voinov 2022).
+- **[TerraSim2](https://github.com/thestochasticman/TerraSim2)** — gridded daily
+  soil water on a terrain grid: buckets with an infiltration cap, downslope
+  routing and Darcy subsurface drainage, validated against field logger sites.
+  The per-cell evaporative demand computed here is what drives it.
 - **[PaddockTS](https://github.com/johnburley3000/PaddockTS)** — paddock-scale
   satellite time series.
 - **[shelterbelts](https://github.com/ChristopherBradley/shelterbelts)** —
