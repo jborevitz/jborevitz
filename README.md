@@ -59,15 +59,24 @@ least thirsty.
 
 ## The packages
 
-All AGPL-3.0, all small and single-purpose, each README leading with what it
-found and linking its methods.
+Five small single-purpose packages, all AGPL-3.0, each README leading with what it
+found and linking its methods. They form a chain, and each link is usable alone.
 
-| | |
-|---|---|
-| **[pylidarterrain](https://github.com/jborevitz/pylidarterrain)** | Bare-earth DEMs and terrain derivatives from classified airborne LiDAR — slope, aspect, horizon angles, sky view. |
-| **[pyterrainsol](https://github.com/jborevitz/pyterrainsol)** | Terrain-corrected solar radiation, PAR, daily light integral, evaporative demand, and the wind and exposure calculations a Penman-Monteith upgrade needs. |
-| **[pychannelform](https://github.com/jborevitz/pychannelform)** | Catchments, channel networks and longitudinal profiles from a flow grid. |
-| **[pylandstore](https://github.com/jborevitz/pylandstore)** | Water storage on sloping land: weir siting, pond geometry, evaporative loss, pumping energy. |
+| package | reads | gives you |
+|---|---|---|
+| **[pylidarterrain](https://github.com/jborevitz/pylidarterrain)** | classified airborne LiDAR | the ground surface a plant actually stands on: slope, aspect, horizon angles, sky view |
+| **[pyterrainsol](https://github.com/jborevitz/pyterrainsol)** | that surface + daily weather | light, PAR, daily light integral and evaporative demand, cell by cell, day by day |
+| **[pyterrainwind](https://github.com/jborevitz/pyterrainwind)** | that surface + reanalysis wind | wind exposure by two schemes, and the extra demand it carries |
+| **[pychannelform](https://github.com/jborevitz/pychannelform)** | that surface | where the water goes: catchments, channel networks, long profiles |
+| **[pylandstore](https://github.com/jborevitz/pylandstore)** | channels + demand | where to hold water, evaporative loss, weir siting, pumping energy |
+
+Light and wind are separate packages on purpose. Aspect-driven radiation is
+predictable geometry and matters at any site with relief; wind needs a terrain-to-
+speed transfer function that is scheme-dependent and only partly constrained, so it
+is an extra position to take rather than a missing feature. The dependency runs one
+way — wind needs the light chain, the light chain never needs wind — so a
+collaborator modelling light installs `pyterrainsol` alone and never has to argue
+with the wind question.
 
 Still to come: change detection between LiDAR epochs, and a daily water balance
 aligned with collaborators' models rather than duplicating them.
