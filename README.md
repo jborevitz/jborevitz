@@ -59,7 +59,7 @@ least thirsty.
 
 ## The packages
 
-Five small single-purpose packages, all AGPL-3.0, each README leading with what it
+Six small single-purpose packages, all AGPL-3.0, each README leading with what it
 found and linking its methods. They form a chain, and each link is usable alone.
 
 | package | reads | gives you |
@@ -69,6 +69,7 @@ found and linking its methods. They form a chain, and each link is usable alone.
 | **[pyterrainwind](https://github.com/jborevitz/pyterrainwind)** | that surface + reanalysis wind | wind exposure by two schemes, and the extra demand it carries |
 | **[pychannelform](https://github.com/jborevitz/pychannelform)** | that surface | where the water goes: catchments, channel networks, long profiles |
 | **[pylandstore](https://github.com/jborevitz/pylandstore)** | channels + demand | where to hold water, evaporative loss, weir siting, pumping energy |
+| **[pylandgraze](https://github.com/jborevitz/pylandgraze)** | all of the above + a herd | terrain-driven grazing allocation: which ground, at which hour, in which season (concept stage) |
 
 Light and wind are separate packages on purpose. Aspect-driven radiation is
 predictable geometry and matters at any site with relief; wind needs a terrain-to-
