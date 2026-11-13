@@ -3,7 +3,7 @@
 Precision Landscape Regeneration, worked at 845 Avonside Benboulder (46.3 ha,
 888–1197 m, Snowy Monaro NSW). Last updated 8 November 2026.
 
-Code lives in four AGPL-3.0 repos under [github.com/jborevitz](https://github.com/jborevitz):
+Code lives in six MIT-licensed repos under [github.com/jborevitz](https://github.com/jborevitz):
 `pylidarterrain`, `pyterrainsol`, `pychannelform`, `pylandstore`. Each README
 leads with findings and links its methods page; results and methods are kept
 apart on purpose.
@@ -70,8 +70,12 @@ SILO daily, and the animation pipeline from the solar and ET movies.
   in `ModelInputs` form, and the TOPMODEL groundwater store) and awaiting his
   pick.
 - Tell **John Burley** that the PaddockTS LICENSE is an HTML page.
-- Check **ANU IP policy** against the AGPL-3.0 choice; note AGPL is banned
-  outright at some companies.
+- **Licence settled: MIT across all repos** (Nov 2026, agreed with Chris Bradley so the
+  group's packages can share code in both directions). Two follow-ups: check **ANU IP
+  policy**, since university employment usually vests IP in the institution; and note
+  that `pylidarterrain` depends on **richdem, which is GPLv3** — an MIT package with a
+  GPL runtime dependency is a known grey area, so either make richdem optional or
+  replace it.
 - **Lab-facing summary document**, and the farm-to-globe microclimate-to-
   macroclimate cartoons.
 

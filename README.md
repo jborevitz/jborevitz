@@ -59,7 +59,7 @@ least thirsty.
 
 ## The packages
 
-Six small single-purpose packages, all AGPL-3.0, each README leading with what it
+Six small single-purpose packages, all MIT-licensed, each README leading with what it
 found and linking its methods. They form a chain, and each link is usable alone.
 
 | package | reads | gives you |
